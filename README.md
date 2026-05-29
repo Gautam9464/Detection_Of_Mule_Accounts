@@ -65,7 +65,7 @@ pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn xgboos
 📁 Repository Structure
 Based on your project files, here is the exact breakdown of the repository and the generated ML artifacts:
 
-Plaintext
+```text
 ├── BOI_IITH.ipynb                 # Core Jupyter/Colab Notebook containing the end-to-end ML pipeline & deployment code
 ├── README.md                      # Project documentation
 ├── cross_validation.png           # Visualization of the 10-Fold CV AUC scores across folds
@@ -74,6 +74,7 @@ Plaintext
 ├── risk_tier_report.csv           # Business output grouping test-set accounts into High Risk, Medium Risk, etc.
 ├── shap_beeswarm.png              # Visual SHAP summary plot demonstrating the impact of the top features
 └── shap_importance.csv            # Tabular export of the mean absolute SHAP values for the pruned feature space
+```
 
 🤝 Contributing & License
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
