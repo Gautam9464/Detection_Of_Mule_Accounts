@@ -53,13 +53,18 @@ To replicate this environment and run the main pipeline notebook (BOI_IITH.ipynb
 1. Clone the repository:
 
 Bash
+```text
 git clone https://github.com/Gautam9464/Detection_Of_Mule_Accounts
-cd YOUR_REPO_NAME
+cd Detection_Of_Mule_Accounts
+```
+
 2. Install the required Data Science and ML libraries:
 You can install all required dependencies using pip. This includes the core modeling libraries, the imbalanced-data handlers, and the hyperparameter tuning/explainability frameworks:
 
 Bash
+```text
 pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn xgboost lightgbm catboost scipy optuna shap joblib jupyter
+```
 (Note: If you intend to run the live UI and API deployment blocks at the end of the notebook, you will also need to install fastapi, uvicorn, pydantic, streamlit, networkx, and pyvis).
 
 📁 Repository Structure
