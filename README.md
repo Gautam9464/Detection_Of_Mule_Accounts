@@ -51,7 +51,7 @@ Prerequisites
 Ensure you have Python 3.10+ installed. It is recommended to use a virtual environment.
 
 Bash
-git clone https://github.com/Gautam98/Detection_Of_Mule_Accounts.git
+git clone https://github.com/Gautam9464/Detection_Of_Mule_Accounts
 cd Mule-Account-Detection
 pip install -r requirements.txt
 
