@@ -45,45 +45,35 @@ Utilizes high-dimensional Cosine-Similarity matrices to cluster visually identic
 
 📉 Concept Drift Tripwire:
 Computes statistical Z-score deviations of incoming API payloads against the original training distribution. If an adversarial attack or "Concept Drift" occurs, the system automatically triggers an MLOps retraining alert.
+Here are the updated Installation & Prerequisites and Repository Structure sections tailored exactly to the files shown in your screenshot. You can swap these directly into your README.md file.
 
-🛠️ Installation & Quickstart
-Prerequisites
-Ensure you have Python 3.10+ installed. It is recommended to use a virtual environment.
+🛠️ Installation & Prerequisites
+To replicate this environment and run the main pipeline notebook (BOI_IITH.ipynb), ensure you have Python 3.10+ installed.
+
+1. Clone the repository:
 
 Bash
 git clone https://github.com/Gautam9464/Detection_Of_Mule_Accounts
-cd Mule-Account-Detection
-pip install -r requirements.txt
-
-1. Train the Models
-(Skip this step if using the pre-trained mule_artifacts.pkl in the /mule_outputs folder).
+cd YOUR_REPO_NAME
+2. Install the required Data Science and ML libraries:
+You can install all required dependencies using pip. This includes the core modeling libraries, the imbalanced-data handlers, and the hyperparameter tuning/explainability frameworks:
 
 Bash
-python train_pipeline.py
-2. Launch the Microservices
-The architecture requires the FastAPI backend to be running simultaneously with the Streamlit frontend.
+pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn xgboost lightgbm catboost scipy optuna shap joblib jupyter
+(Note: If you intend to run the live UI and API deployment blocks at the end of the notebook, you will also need to install fastapi, uvicorn, pydantic, streamlit, networkx, and pyvis).
 
-Terminal 1 (Backend):
-
-Bash
-uvicorn server:app --host 0.0.0.0 --port 8000
-(The API documentation will be available at http://localhost:8000/docs)
-
-Terminal 2 (Frontend):
-
-Bash
-streamlit run app.py
 📁 Repository Structure
+Based on your project files, here is the exact breakdown of the repository and the generated ML artifacts:
+
 Plaintext
-├── mule_outputs/               # Serialized artifacts, graphs, and metrics
-│   ├── mule_artifacts.pkl      # The compiled Grandmaster Ensemble dict
-│   ├── evaluation_dashboard.png# Final test set visualization suite
-│   └── metrics.json            # Final scoring metrics
-├── train_pipeline.py           # Core ML training and optimization script
-├── server.py                   # FastAPI prediction microservice
-├── app.py                      # Streamlit Analyst UI dashboard
-├── requirements.txt            # Python dependencies
-└── README.md     
+├── BOI_IITH.ipynb                 # Core Jupyter/Colab Notebook containing the end-to-end ML pipeline & deployment code
+├── README.md                      # Project documentation
+├── cross_validation.png           # Visualization of the 10-Fold CV AUC scores across folds
+├── evaluation_dashboard.png       # 6-panel evaluation dashboard (ROC, Precision-Recall, Confusion Matrix, Distribution, etc.)
+├── metrics.json                   # Serialized JSON file containing final test metrics (F1, AUC, Recall, FPR, etc.)
+├── risk_tier_report.csv           # Business output grouping test-set accounts into High Risk, Medium Risk, etc.
+├── shap_beeswarm.png              # Visual SHAP summary plot demonstrating the impact of the top features
+└── shap_importance.csv            # Tabular export of the mean absolute SHAP values for the pruned feature space
 
 🤝 Contributing & License
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
