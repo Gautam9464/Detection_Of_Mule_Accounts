@@ -1,4 +1,4 @@
-🛡️ Enterprise UPI Fraud & Mule Account Detection Platform
+🛡️Enterprise UPI Fraud & Mule Account Detection Platform
 An end-to-end, production-ready Machine Learning Microservice designed to detect organized money mule accounts and financial fraud within highly imbalanced (111:1) UPI transaction data.Unlike standard competitive notebooks, this project implements a Zero-Trust Hybrid Architecture, combining an automated target-leakage guard, a 5-fold Out-Of-Fold (OOF) deep stacking ensemble, and a live MLOps Concept Drift monitor.
 
 📈 Business Impact & Key Results
